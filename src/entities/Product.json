@@ -1,0 +1,59 @@
+{
+  "name": "Product",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Product name"
+    },
+    "sku": {
+      "type": "string",
+      "description": "Stock keeping unit"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Brazilian",
+        "Peruvian",
+        "Malaysian",
+        "Indian",
+        "Closure",
+        "Frontal",
+        "Wig",
+        "Accessories"
+      ],
+      "description": "Product category"
+    },
+    "price": {
+      "type": "number",
+      "description": "Selling price in ZAR"
+    },
+    "cost": {
+      "type": "number",
+      "description": "Cost price in ZAR"
+    },
+    "stock_quantity": {
+      "type": "number",
+      "description": "Current stock level"
+    },
+    "reorder_point": {
+      "type": "number",
+      "description": "Minimum stock before reorder",
+      "default": 5
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Product image URL"
+    },
+    "length": {
+      "type": "string",
+      "description": "Hair length (e.g., 12, 14, 16 inches)"
+    }
+  },
+  "required": [
+    "name",
+    "sku",
+    "price",
+    "stock_quantity"
+  ]
+}

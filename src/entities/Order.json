@@ -1,0 +1,84 @@
+{
+  "name": "Order",
+  "type": "object",
+  "properties": {
+    "order_number": {
+      "type": "string",
+      "description": "Unique order number"
+    },
+    "customer_name": {
+      "type": "string",
+      "description": "Customer name"
+    },
+    "customer_email": {
+      "type": "string",
+      "description": "Customer email"
+    },
+    "customer_phone": {
+      "type": "string",
+      "description": "Customer phone"
+    },
+    "total_amount": {
+      "type": "number",
+      "description": "Order total in ZAR"
+    },
+    "total_cost": {
+      "type": "number",
+      "description": "Total cost in ZAR"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "processing",
+        "fulfilled",
+        "shipped",
+        "delivered",
+        "cancelled"
+      ],
+      "default": "pending",
+      "description": "Order status"
+    },
+    "channel": {
+      "type": "string",
+      "enum": [
+        "Website",
+        "WhatsApp",
+        "Instagram",
+        "Facebook",
+        "In-Store"
+      ],
+      "description": "Sales channel"
+    },
+    "order_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Order creation date"
+    },
+    "fulfilled_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Order fulfillment date"
+    },
+    "delivered_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Delivery date"
+    },
+    "shipping_address": {
+      "type": "string",
+      "description": "Delivery address"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Order notes"
+    }
+  },
+  "required": [
+    "order_number",
+    "customer_email",
+    "total_amount",
+    "channel",
+    "order_date"
+  ]
+}

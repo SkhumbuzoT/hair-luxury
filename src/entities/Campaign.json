@@ -1,0 +1,67 @@
+{
+  "name": "Campaign",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Campaign name"
+    },
+    "platform": {
+      "type": "string",
+      "enum": [
+        "Facebook",
+        "Instagram",
+        "Google Ads",
+        "TikTok",
+        "WhatsApp Business",
+        "Email"
+      ],
+      "description": "Marketing platform"
+    },
+    "spend": {
+      "type": "number",
+      "description": "Total ad spend in ZAR"
+    },
+    "revenue": {
+      "type": "number",
+      "description": "Revenue generated in ZAR"
+    },
+    "impressions": {
+      "type": "number",
+      "description": "Total impressions"
+    },
+    "clicks": {
+      "type": "number",
+      "description": "Total clicks"
+    },
+    "conversions": {
+      "type": "number",
+      "description": "Number of conversions"
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Campaign start date"
+    },
+    "end_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Campaign end date"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "paused",
+        "completed"
+      ],
+      "default": "active"
+    }
+  },
+  "required": [
+    "name",
+    "platform",
+    "spend",
+    "start_date"
+  ]
+}

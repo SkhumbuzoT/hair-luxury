@@ -1,0 +1,36 @@
+{
+  "name": "OrderItem",
+  "type": "object",
+  "properties": {
+    "order_id": {
+      "type": "string",
+      "description": "Reference to Order"
+    },
+    "product_id": {
+      "type": "string",
+      "description": "Reference to Product"
+    },
+    "product_name": {
+      "type": "string",
+      "description": "Product name snapshot"
+    },
+    "quantity": {
+      "type": "number",
+      "description": "Quantity ordered"
+    },
+    "price": {
+      "type": "number",
+      "description": "Price per unit in ZAR"
+    },
+    "cost": {
+      "type": "number",
+      "description": "Cost per unit in ZAR"
+    }
+  },
+  "required": [
+    "order_id",
+    "product_id",
+    "quantity",
+    "price"
+  ]
+}
